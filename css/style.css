@@ -1,0 +1,71 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'symbols-nerds';
+	src: url('../fonts/symbols-nerds.woff') format('woff'),
+		url('../fonts/symbols-nerds.woff2') format('woff2');
+}
+
+body {
+	font-size: 14px;
+	line-height: 30px;
+	color: #000;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+	min-width: 900px;
+}
+.main-header {
+	background-color: #eee;
+}
+
+.container {
+	width: 880px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.main-header-logo {
+	float: left;
+	margin-top: 30px;
+}
+.site-navigation {
+	float: right;
+
+}
+
+.site-navigation ul { 
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 57px;
+	margin-right: 28px;
+}
+
+.site-navigation li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 40px;
+	margin-bottom: 40px;
+}
+
+.site-navigation a {
+	text-decoration: none;
+	color: #000;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.site-navigation a:hover {
+	color: #fb565a;
+}
+
+.site-navigation a:active {
+	color: #9c9c9c;
+}
+
+.site-navigation .active {
+	padding-bottom: 4px;
+	border-bottom: 2px solid #fb565a;
+}
+
