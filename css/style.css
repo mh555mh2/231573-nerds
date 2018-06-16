@@ -14,6 +14,11 @@ body {
 	font-weight: 500;
 	min-width: 900px;
 }
+
+span {
+	white-space: nowrap;
+}
+
 .main-header {
 	background-color: #eee;
 }
@@ -23,10 +28,12 @@ body {
 	padding: 0 10px;
 	margin: 0 auto;
 }
+
 .main-header-logo {
 	float: left;
 	margin-top: 30px;
 }
+
 .site-navigation {
 	float: right;
 
@@ -68,27 +75,14 @@ body {
 	padding-bottom: 4px;
 	border-bottom: 2px solid #fb565a;
 }
-.user-navigation {
+
+.cart-icon {
+	position: relative;
 	float: right;
-
+	margin-left: 67px;
 }
 
-.user-navigation ul { 
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	margin-top: 57px;
-	margin-right: 28px;
-}
-
-.user-navigation li {
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 40px;
-	margin-bottom: 40px;
-}
-
-.user-navigation a {
+.cart-icon a {
 	text-decoration: none;
 	color: #000;
 	font-size: 14px;
@@ -97,16 +91,311 @@ body {
 	text-transform: uppercase;
 }
 
-.user-navigation a:hover {
+.cart a:hover {
 	color: #fb565a;
 }
 
-.user-navigation a:active {
+.cart-icon a:active {
 	color: #9c9c9c;
 }
 
-.user-navigation .active {
-	padding-bottom: 4px;
-	border-bottom: 2px solid #fb565a;
+.cart-icon:before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: -29px;
+	background: url('../img/sprite-icons.png') 0 -213px no-repeat;
+	width: 20px;
+	height: 20px;
 }
 
+.cart-icon:hover:before {
+	background: url('../img/sprite-icons.png')  0 -244px no-repeat;
+}
+
+
+.slider {
+	position: relative;
+	width: 880px;
+	min-height: 310px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slider-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 310px;
+	background-repeat: no-repeat;
+	background-position: 100% 10px;
+		-webkit-transition: left 0.3s ease;
+		-moz-transition: left 0.3s ease;
+		transition: left 0.3s ease;
+}
+
+.slider input[type='radio'] {
+	display: none;
+}
+
+.slider-controls {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	z-index: 10;
+	width: 200px;
+	margin-left: -110px;
+	text-align: center;
+}
+
+.slider-controls label {
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin: 0 3px;
+	vertical-align: top;
+	background: #ffffff;
+	border: 3px solid white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.promo-text {
+	width: 500px;
+	padding: 32px 0;
+}
+
+.promo-text {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.slider p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
+}
+
+.slider .button {
+	display: block;
+	width: 220px;
+	margin-top: 28px;
+	padding: 5px 10px;
+	font-weight: 300;
+	font-size: 12px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #fb565a;
+	border-radius: 3px;
+}
+
+.slider:nth-child(1) {
+	background-image: url('../img/slider-icon1.png');
+}
+
+.slider:nth-child(2) {
+	background-image: url('../img/slider-icon2.png');
+}
+
+.slider:nth-child(3) {
+	background-image: url('../img/slider-icon3.png');
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+	left: 0;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(2),
+#btn-1:checked ~ .slides .slide:nth-child(3) {
+	left: 880px;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(1) {
+	left: -880px;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+	left: 0;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(3) {
+	left: -880px;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(1) {
+	left: -880px;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(2) {
+	left: -880px;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+	left: 0;
+}
+
+#btn-1:checked ~ .slider-controls label[for='btn-1'],
+#btn-2:checked ~ .slider-controls label[for='btn-2'],
+#btn-3:checked ~ .slider-controls label[for='btn-3'] {
+	background: #c1c1c1;
+}
+
+.advantages-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 240px;
+	margin-right: 76px;
+	margin-top: 82px;
+	margin-bottom: 85px;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 500;
+}
+
+.advantages-item:last-child {
+	margin-right: 0;
+}
+
+.advantages-item p {
+	color: #283136;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+.advantages-item .advantages-title {
+	margin-top: 16px;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.advantages-item p:nth-child(3n) {
+	margin-bottom: 30px;
+}
+
+.advantages-item a {
+	text-decoration: none;
+	color: #fff;
+	padding: 12px 40px;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.advandages .container {
+	border-bottom: #eee 2px solid;
+}
+
+.button.advantages-1 {
+	background-color: #fb565a;
+}
+
+.button.advantages-1:hover {
+	background-color: #d6494d;
+}
+
+.button.advantages-1:active {
+	background-color: #b63538;
+	box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, .15);
+}
+
+.button.advantages-2 {
+	background-color: #00ca74;
+}
+
+.button.advantages-2:hover {
+	background-color: #01a25e;
+}
+
+.button.advantages-2:active {
+	background-color: #009053;
+	box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, .15);
+}
+
+.button.advantages-3 {
+	background-color: #efc84a;
+}
+
+.button.advantages-3:hover {
+	background-color: #d6ae2c;
+}
+
+.button.advantages-3:active {
+	background-color: #c09b24;
+	box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, .15);
+}
+
+.studio-description {
+	float: left;
+}
+
+.about-statistic {
+	float: right;
+}
+
+.studio .promo-text {
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.studio-description p {
+	color: #283136;
+	font-size: 16px;
+	line-height: 22px;
+	word-spacing: 1px;
+}
+
+.studio-img {
+	margin-top: 15px;
+	margin-bottom: 57px;
+}
+
+.principles {
+	margin-top: 40px;
+	margin-bottom: 48px;
+}
+
+.principles p {
+	color: #283136;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 22px;
+}
+
+.principles ul {
+	margin: 0;
+	padding: 0;
+}
+
+.principles li {
+	color: #283136;
+	font-size: 16px;
+	line-height: 22px;
+	list-style-type: none;
+	padding-bottom: 22px;
+}
+
+.principles li:before {
+	content: '';
+	display: inline-block;
+	width: 25px;
+	height: 2px;
+	background-color: #fb565a;
+	margin-right: 12px;
+	vertical-align: middle;
+}
+
+.studio {
+	margin-top: 45px;
+}
+
+.studio .container {
+	border-bottom: #eee 2px solid;
+}
