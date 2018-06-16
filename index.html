@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header class="main-header container">
+       <header class="main-header container">
       <nav class="main-navigation">
          <div class="logo">
         <img src="img/nerds-logo.svg" class="main-header-logo" alt="Логотип Nerds">
@@ -17,8 +17,6 @@
           <li><a href="#">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
-        </ul>
-        <ul class="user-navigation">
         <li class="cart-icon">
           <a href="#"> <img src="img/cart-icon.svg" class="shopping-cart" alt="Корзина"></a></li>
         </ul>
@@ -26,6 +24,14 @@
     </header>
     <main>
       <div class="slider">
+        <input type="radio" id="btn-1" name="toggle" checked>
+					<input type="radio" id="btn-2" name="toggle">
+					<input type="radio" id="btn-3" name="toggle">
+					<div class="slider-controls">
+						<label for="btn-1"></label>
+						<label for="btn-2"></label>
+						<label for="btn-3"></label>
+					</div>
       <section class="container slider-item slider-one">
          <h2 class="visually-hidden">Основные принципы</h2>
         <p class="promo-text">Долго, дорого, скрупулезно.</p>
@@ -72,7 +78,7 @@
       </section>
       <!-- Середина страницы -->
 <div class="studio">
-       <section class="studio-description">
+       <section class="studio-description container">
          <h2 class="visually-hidden">Студия</h2>
         <p class="promo-text">Мы - маленькая, но гордая дизайн-студия из Краснодара!</p>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
@@ -150,6 +156,6 @@
     <p class="promo-text">Давайте дружить, это выгодно!</p>
     <p>Скидка 10% для друзей из социальных сетей.</p>
 </div>
-</footer>   
+</footer> 
   </body>
 </html>
