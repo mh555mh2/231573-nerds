@@ -26,12 +26,14 @@ span {
 
 .container {
 	width: 1440px;
+  display: flex;
+ justify-content: center;
 	padding: 0 10px;
 	margin: 0 auto;
 }
 
 .main-header-logo {
-	float: left;
+
 	margin-top: 49px;
 	margin-left: 140px;
 	margin-right: 1140px;
@@ -42,7 +44,7 @@ span {
 
 
 .site-navigation {
-	float: right;
+
 
 }
 
@@ -85,7 +87,7 @@ span {
 
 .cart-icon {
 	position: relative;
-	float: right;
+
 	margin-top: 82px;
 	margin-left: 67px;
 }
